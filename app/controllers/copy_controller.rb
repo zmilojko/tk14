@@ -11,7 +11,7 @@ class CopyController < ApplicationController
         file = File.open @path
         render text: MARKDOWN.render(file.read)
       else
-        raise ActionController::RoutingError.new('Not Found')
+        raise ActionController::RoutingError.new("Content file #{request[:path]} does not exist with any supported extension.")
       end
     end
   end
