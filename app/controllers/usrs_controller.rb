@@ -1,5 +1,7 @@
 class UsrsController < ApplicationController
   before_action :set_usr, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action { |c| raise ActionController::RoutingError.new("Not Found") if not current_user.is_admin? }
 
   # GET /usrs
   # GET /usrs.json
@@ -73,6 +75,12 @@ class UsrsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usr_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:email, :password, :password_confirmation, :is_admin)
+    end
+
+    def check_admin
+      if current_user.try(:admin?)
+        
+      end
     end
 end

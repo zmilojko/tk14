@@ -6,11 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-p 'Create user zeljko, password zeljko123'
-User.create! id: 1,
-             email: 'zeljko@z-ware.fi',
+p 'Create admin zeljko, password zeljko123, and a user kata'
+User.create! email: 'zeljko@z-ware.fi',
+             password: 'zeljko123',
+             password_confirmation: 'zeljko123',
+             is_admin: true
+
+User.create! email: 'kata@iloisettassut.fi',
              password: 'zeljko123',
              password_confirmation: 'zeljko123'
+
 
 p 'Create sample categories'
 Category.create! code: 'SpU 22',

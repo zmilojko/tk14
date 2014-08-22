@@ -3,7 +3,9 @@
 %p
   %b Email:
   = @usr.email
-
+- if @usr.is_admin?
+  %p
+    %b This user is admin!
 = link_to 'Edit', edit_usr_path(@usr)
 \|
 = link_to 'Back', usrs_path
