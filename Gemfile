@@ -41,3 +41,4 @@ gem 'spring',        group: :development
 gem 'haml'
 gem 'haml-rails'
 gem 'devise'
+gem 'redcarpet'

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  class CopyLookup
+    def self.matches?(request)
+      puts "Looking for {request.inspect}"
+    end
+  end
+  get '*path', to: 'copy#get', 
+    constraints: lambda { |request| not Dir["#{Rails.root}/app/copy/#{request[:path]}.*"].empty? }
+
+  # get 'copy/get'
+
   resources :categories
   resources :usrs
 
