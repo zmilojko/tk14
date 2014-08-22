@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :categories
+  resources :usrs
+
   devise_scope :user do
     get 'login' => 'devise/sessions#new'
     get 'logout' => 'devise/sessions#destroy'
