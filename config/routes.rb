@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     get 'logout' => 'devise/sessions#destroy'
   end
 
+
+  get 'users/sign_up' => redirect('/404.html')
   devise_for :users
   get 'home/get'
 
