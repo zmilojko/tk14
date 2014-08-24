@@ -1,5 +1,8 @@
 class RacesController < ApplicationController
   before_action :set_race, only: [:show, :edit, :update, :destroy]
+  before_action except: [:index, :show] do |c| 
+    raise ActionController::RoutingError.new("Not Found") if not current_user.try(:is_admin?) 
+  end
 
   # GET /races
   # GET /races.json

@@ -1,7 +1,8 @@
 class UsrsController < ApplicationController
   before_action :set_usr, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  before_action { |c| raise ActionController::RoutingError.new("Not Found") if not current_user.is_admin? }
+  before_action do |c| 
+    raise ActionController::RoutingError.new("Not Found") if not current_user.try(:is_admin?) 
+  end
 
   # GET /usrs
   # GET /usrs.json

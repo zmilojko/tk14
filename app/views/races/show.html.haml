@@ -21,7 +21,7 @@
 %p
   %b Status:
   = @race.status
-
-= link_to 'Edit', edit_race_path(@race)
-\|
+-if current_user.try(:is_admin?)
+  = link_to 'Edit', edit_race_path(@race)
+  \|
 = link_to 'Back', races_path

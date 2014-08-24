@@ -1,5 +1,10 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action except: [:index, :show] do |c| 
+    raise ActionController::RoutingError.new("Not Found") if not current_user.try(:is_admin?) 
+  end
+     
+
 
   # GET /categories
   # GET /categories.json
