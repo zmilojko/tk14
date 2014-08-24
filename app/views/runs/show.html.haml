@@ -13,6 +13,7 @@
   %b Times:
   = @run.times
 
-= link_to 'Edit', edit_run_path(@run)
-\|
+-if current_user.try(:is_admin?)
+  = link_to 'Edit', edit_run_path(@run)
+  \|
 = link_to 'Back', runs_path

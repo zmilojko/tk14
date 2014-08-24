@@ -17,9 +17,9 @@
       %td= run.number
       %td= run.times
       %td= link_to 'Show', run
-      %td= link_to 'Edit', edit_run_path(run)
-      %td= link_to 'Destroy', run, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Run', new_run_path
+      -if current_user.try(:is_admin?)
+        %td= link_to 'Edit', edit_run_path(run)
+        %td= link_to 'Destroy', run, :method => :delete, :data => { :confirm => 'Are you sure?' }
+-if current_user.try(:is_admin?)
+  %br
+  = link_to 'New Run', new_run_path

@@ -1,5 +1,8 @@
 class RunsController < ApplicationController
   before_action :set_run, only: [:show, :edit, :update, :destroy]
+  before_action except: [:index, :show] do |c| 
+    raise ActionController::RoutingError.new("Not Found") if not current_user.try(:is_admin?) 
+  end
 
   # GET /runs
   # GET /runs.json
