@@ -89,11 +89,6 @@ Overview:
   - Pass positions (json of named positions. start and finish are added implicitely)
   - Race secret (random string allows marking times)
   - Status: scheduled, running, completed (waiting official times), closed, current
-1. Dog
-  - Optional foreign key: User (owner)
-  - Owner name (only if User is nil)
-  - Name
-  - Race
 1. Run
   - Foreign key: Race
   - Foreign key: User
