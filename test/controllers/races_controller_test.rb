@@ -3,6 +3,7 @@ require 'test_helper'
 class RacesControllerTest < ActionController::TestCase
   setup do
     @race = races(:one)
+    sign_in users(:admin)
   end
 
   test "should get index" do

@@ -9,3 +9,10 @@
 #
 #two: {}
 #  column: value
+
+admin:
+  email: one@example.com
+  is_admin: true
+
+dummy:
+  email: two@example.com
