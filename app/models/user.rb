@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   #            current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip,
   #            created_at, updated_at 
   # model fields: password, password_confirmation
+
+  has_many :runs, dependent: :restrict_with_exception
+
 end

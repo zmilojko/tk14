@@ -12,8 +12,8 @@
 
   - @runs.each do |run|
     %tr
-      %td= run.race_id
-      %td= run.user_id
+      %td= run.race.label
+      %td= run.user.display_name
       %td= run.number
       %td= run.times
       %td= link_to 'Show', run

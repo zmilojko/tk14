@@ -8,10 +8,10 @@
 
   .field
     = f.label :race_id
-    = f.number_field :race_id
+    = f.collection_select :race_id, Race.all, :id, :label    
   .field
     = f.label :user_id
-    = f.number_field :user_id
+    = f.collection_select :user_id, User.all, :id, :display_name
   .field
     = f.label :number
     = f.text_field :number
