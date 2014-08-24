@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  category_id: 1
+  category: one
   race_time: 2014-08-24 11:26:55
   name: MyString
   description: MyString
@@ -10,7 +10,7 @@ one:
   status: MyString
 
 two:
-  category_id: 1
+  category: one
   race_time: 2014-08-24 11:26:55
   name: MyString
   description: MyString

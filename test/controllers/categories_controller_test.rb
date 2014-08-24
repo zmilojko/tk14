@@ -3,6 +3,7 @@ require 'test_helper'
 class CategoriesControllerTest < ActionController::TestCase
   setup do
     @category = categories(:one)
+    @category_two = categories(:two)
   end
 
   test "should get index" do
@@ -39,11 +40,16 @@ class CategoriesControllerTest < ActionController::TestCase
     assert_redirected_to category_path(assigns(:category))
   end
 
-  test "should destroy category" do
-    assert_difference('Category.count', -1) do
+  test "should raise error when destroying category with dependent race" do
+    assert_raises(ActiveRecord::DeleteRestrictionError) do
       delete :destroy, id: @category
     end
+  end
 
+  test "should destroy category" do
+    assert_difference('Category.count', -1) do
+      delete :destroy, id: @category_two
+    end
     assert_redirected_to categories_path
   end
 end
