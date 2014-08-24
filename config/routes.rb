@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :races
+
   get '*path', to: 'copy#get', 
     constraints: lambda { |request| not Dir["#{Rails.root}/app/copy/#{request[:path]}.*"].empty? }
 

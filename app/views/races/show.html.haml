@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Category:
+  = @race.category_id
+%p
+  %b Race time:
+  = @race.race_time
+%p
+  %b Name:
+  = @race.name
+%p
+  %b Description:
+  = @race.description
+%p
+  %b Intermediate points:
+  = @race.intermediate_points
+%p
+  %b Race secret:
+  = @race.race_secret
+%p
+  %b Status:
+  = @race.status
+
+= link_to 'Edit', edit_race_path(@race)
+\|
+= link_to 'Back', races_path
