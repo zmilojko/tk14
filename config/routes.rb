@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :runs
+
   resources :races
 
   get '*path', to: 'copy#get', 

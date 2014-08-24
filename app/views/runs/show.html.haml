@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Race:
+  = @run.race_id
+%p
+  %b User:
+  = @run.user_id
+%p
+  %b Number:
+  = @run.number
+%p
+  %b Times:
+  = @run.times
+
+= link_to 'Edit', edit_run_path(@run)
+\|
+= link_to 'Back', runs_path
