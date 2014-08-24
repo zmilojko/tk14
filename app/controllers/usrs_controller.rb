@@ -76,7 +76,8 @@ class UsrsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usr_params
-      params.require(:user).permit(:email, :password, :password_confirmation, :is_admin)
+      params.require(:user).permit(:email, :password, :password_confirmation, :is_admin,
+        :is_racer, :display_name, :full_name, :profile, :pictures)
     end
 
     def check_admin
