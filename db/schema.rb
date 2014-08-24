@@ -11,12 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140822134129) do
+ActiveRecord::Schema.define(version: 20140824082655) do
 
   create_table "categories", force: true do |t|
     t.string   "code"
     t.string   "description"
     t.string   "length"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "races", force: true do |t|
+    t.integer  "category_id"
+    t.datetime "race_time"
+    t.string   "name"
+    t.string   "description"
+    t.string   "intermediate_points"
+    t.string   "race_secret"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,6 +47,11 @@ ActiveRecord::Schema.define(version: 20140822134129) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "is_admin"
+    t.string   "display_name"
+    t.string   "full_name"
+    t.string   "profile"
+    t.string   "pictures"
+    t.boolean  "is_racer"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

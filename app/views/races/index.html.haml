@@ -15,7 +15,7 @@
 
   - @races.each do |race|
     %tr
-      %td= race.category_id
+      %td= race.category.description
       %td= race.race_time
       %td= race.name
       %td= race.description
