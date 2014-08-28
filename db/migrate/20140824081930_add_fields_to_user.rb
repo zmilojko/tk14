@@ -4,6 +4,7 @@ class AddFieldsToUser < ActiveRecord::Migration
     add_column :users, :full_name, :string
     add_column :users, :profile, :string
     add_column :users, :pictures, :string
-    add_column :users, :is_racer, :boolean
+    add_column :users, :is_racer, :boolean, default: true
+    add_column :users, :nationality, :string
   end
 end

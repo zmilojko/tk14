@@ -10,5 +10,7 @@ class User < ActiveRecord::Base
   # model fields: password, password_confirmation
 
   has_many :runs, dependent: :restrict_with_exception
-
+  def show_name
+    display_name || full_name
+  end
 end

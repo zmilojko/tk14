@@ -10,6 +10,25 @@
   %h2 Races
   -@usr.runs.each do |run|
     =run.race.label_desc
+  %h2 Apply for a race
+  -newrun = Run.new
+  =form_for newrun do |f|
+    .field
+      = f.label :race_id
+      = f.collection_select :race_id, Race.all, :id, :label    
+    .field
+      = f.hidden_field :user_id, value: @usr.id
+    .field
+      = f.label :number
+      = f.text_field :number
+    .field
+      = f.label :times
+      = f.text_field :times
+    .actions
+      = f.submit 'Save'
+      
+
+
 = link_to 'Edit', edit_usr_path(@usr)
 \|
 = link_to 'Back', usrs_path
