@@ -19,6 +19,7 @@
   %b Status:
   = @race.status
 -if current_user.try(:is_admin?)
+  = render 'next', race: @race
   = link_to 'Edit', edit_race_path(@race)
   \|
 = link_to 'Back', races_path

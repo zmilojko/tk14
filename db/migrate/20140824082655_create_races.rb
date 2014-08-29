@@ -6,9 +6,8 @@ class CreateRaces < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :intermediate_points
-      t.string :status
-
       t.timestamps
     end
+    add_column :races, :status, :string, default: 'not_started'
   end
 end

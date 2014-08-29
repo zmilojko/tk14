@@ -23,6 +23,7 @@
     = f.text_field :intermediate_points
   .field
     = f.label :status
-    = f.text_field :status
+    = f.select :status, [['Not started','not_started'],['Ongoing','ongoing'],
+                             ['Completed','completed'], ['Closed','closed']]
   .actions
     = f.submit 'Save'
