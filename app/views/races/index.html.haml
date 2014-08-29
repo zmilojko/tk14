@@ -7,7 +7,6 @@
     %th Name
     %th Description
     %th Intermediate points
-    %th Race secret
     %th Status
     %th
     %th
@@ -20,7 +19,6 @@
       %td= race.name
       %td= race.description
       %td= race.intermediate_points
-      %td= race.race_secret
       %td= race.status
       %td= link_to 'Show', race
       - if current_user.try(:is_admin?)

@@ -6,7 +6,6 @@ class CreateRaces < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.string :intermediate_points
-      t.string :race_secret
       t.string :status
 
       t.timestamps

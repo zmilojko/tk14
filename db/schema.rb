@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20140824125919) do
     t.string   "name"
     t.string   "description"
     t.string   "intermediate_points"
-    t.string   "race_secret"
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
