@@ -50,4 +50,4 @@
       %td= run.user.show_name
       -if not run.times.empty?
         %td= format_time(a = JSON.parse(run.times)["final"], winner_time)
-        -winner_time=a if winner_time = 0
+        -winner_time=a if winner_time == 0
