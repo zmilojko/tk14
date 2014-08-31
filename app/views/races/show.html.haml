@@ -23,3 +23,31 @@
   = link_to 'Edit', edit_race_path(@race)
   \|
 = link_to 'Back', races_path
+
+- case @race.status
+  - when 'not_started'
+    %h2 Start list
+  - when 'ongoing'
+    %h2 Race standings
+  - when 'completed'
+    %h2 Final results
+
+%table
+  %tr
+    -if @race.status != 'not_started'
+      %th Position
+    %th Starting number
+    %th Competitor
+    %th Time
+
+  - i = 0
+  - winner_time = 0
+  - @race.runs_sorted.each do |run|
+    %tr
+      -if @race.status != 'not_started'
+        %td= i=i+1
+      %td= run.number
+      %td= run.user.show_name
+      -if not run.times.empty?
+        %td= format_time(a = JSON.parse(run.times)["final"], winner_time)
+        -winner_time=a if winner_time = 0
