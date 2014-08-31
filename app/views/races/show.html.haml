@@ -38,7 +38,8 @@
       %th Position
     %th Starting number
     %th Competitor
-    %th Time
+    -if @race.status != 'not_started'
+      %th Time
 
   - i = 0
   - winner_time = 0
@@ -48,6 +49,7 @@
         %td= i=i+1
       %td= run.number
       %td= run.user.show_name
-      -if not run.times.empty?
-        %td= format_time(a = JSON.parse(run.times)["final"], winner_time)
-        -winner_time=a if winner_time == 0
+      -if @race.status != 'not_started'
+        -if not run.times.empty?
+          %td= format_time(a = JSON.parse(run.times)["final"], winner_time)
+          -winner_time=a if winner_time == 0
