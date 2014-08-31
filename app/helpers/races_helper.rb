@@ -9,6 +9,9 @@ module RacesHelper
   end
 
   def format_time(current,lead)
+    if current.nil?
+      return ""
+    end
     current -= lead
     h = current.to_i / 3600
     m = current.to_i % 3600 / 60

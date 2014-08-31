@@ -38,6 +38,17 @@ class Race < ActiveRecord::Base
     end
   end
 
+  def latest_timestamp
+    ((intermediate_points||"").split << :finish_timstamp << :final).reverse.each do |spot|
+      runs.each do |run|
+        if not run.intermediate(spot).nil?
+          return spot
+        end       
+      end
+    end
+    :number
+  end
+
   private
 
   def nilcomp(l,r)
@@ -62,16 +73,5 @@ class Race < ActiveRecord::Base
     else
       nilcomp(l.verdict,r.verdict) | nilcomp(l.intermediate(criteria),r.intermediate(criteria))
     end
-  end
-
-  def latest_timestamp
-    ((intermediate_points||"").split << :finish_timstamp << :final).reverse.each do |spot|
-      runs.each do |run|
-        if not run.intermediate(spot).nil?
-          return spot
-        end       
-      end
-    end
-    :number
   end
 end
