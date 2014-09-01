@@ -31,7 +31,7 @@ class Race < ActiveRecord::Base
     case status.to_sym
       when :not_started then p "blah"; runs_by_number
       when :completed then runs_by_time(:finish_timestamp)
-      when :close then runs_by_time(:final)
+      when :closed then runs_by_time(:final)
       when :ongoing then runs_by_time(latest_timestamp)
     end
   end
