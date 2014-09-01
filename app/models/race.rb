@@ -36,10 +36,16 @@ class Race < ActiveRecord::Base
     end
   end
 
-  def latest_timestamp
+  def all_timestamps
     list = [:start_timestamp]
     (intermediate_points||"").split.each { |spot| list << "#{spot}_timestamp".to_sym }
-    (list << :finish_timestamp << :final).reverse.each do |spot|
+    list << :finish_timestamp << :final
+    puts list.inspect
+    list
+  end
+
+  def latest_timestamp
+    all_timestamps.reverse.each do |spot|
       runs.each do |run|
         if not run.timestamp(spot).nil?
           return spot
