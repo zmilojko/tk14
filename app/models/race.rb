@@ -40,7 +40,6 @@ class Race < ActiveRecord::Base
     list = [:start_timestamp]
     (intermediate_points||"").split.each { |spot| list << "#{spot}_timestamp".to_sym }
     list << :finish_timestamp << :final
-    puts list.inspect
     list
   end
 

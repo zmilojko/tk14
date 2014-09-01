@@ -45,8 +45,6 @@
 
   - i = 0
   - winner_time = Hash[timemarks.map { |timestamp| [timestamp,nil] }]
-  -puts "runs not sorted: #{@race.runs.inspect}"
-  - puts "runs sorted: #{@race.runs_sorted.inspect}"
   - @race.runs_sorted.each do |run|
     %tr
       -if @race.status != 'not_started'
