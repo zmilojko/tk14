@@ -17,9 +17,8 @@ class Race < ActiveRecord::Base
   def runs_by_number
     runs.sort { |l,r| l.number <=> r.number }
   end
-  def runs_by_time(point)
-    p "point is #{point}"
-    runs.sort { |l,r| compare(l,r,point) }
+  def runs_by_time(spot)
+    runs.sort { |l,r| compare(l,r,spot) }
   end 
   # This one sorts the runs, but decides on its own by which parameter:
   #   - if the race is 'not_started', it sorts by number
@@ -29,7 +28,6 @@ class Race < ActiveRecord::Base
   #     and sorts baed on that.
   # In all cases, if verdict is not null, it should sort by verdict first.
   def runs_sorted
-    p "sorted"
     case status.to_sym
       when :not_started then p "blah"; runs_by_number
       when :completed then runs_by_time(:finish_timestamp)
@@ -39,9 +37,11 @@ class Race < ActiveRecord::Base
   end
 
   def latest_timestamp
-    ((intermediate_points||"").split << :finish_timstamp << :final).reverse.each do |spot|
+    list = [:start_timestamp]
+    (intermediate_points||"").split.each { |spot| list << "#{spot}_timestamp".to_sym }
+    (list << :finish_timestamp << :final).reverse.each do |spot|
       runs.each do |run|
-        if not run.intermediate(spot).nil?
+        if not run.timestamp(spot).nil?
           return spot
         end       
       end
@@ -71,7 +71,7 @@ class Race < ActiveRecord::Base
     if criteria == :number
       l.number <=> r.number
     else
-      nilcomp(l.verdict,r.verdict) | nilcomp(l.intermediate(criteria),r.intermediate(criteria))
+      nilcomp(l.verdict,r.verdict) | nilcomp(l.elapsed_time(criteria),r.elapsed_time(criteria))
     end
   end
 end

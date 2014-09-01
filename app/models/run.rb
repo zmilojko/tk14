@@ -2,31 +2,65 @@ class Run < ActiveRecord::Base
   belongs_to :race
   belongs_to :user
 
-  # this returns a decimal number in seconds since the start
-  def intermediate(point)
-    if point.to_s == "final"
+  def times_hash
+    if not times.empty?
+      JSON.parse(times)
+    else
+      nil
+    end
+  end
+
+  # many thanks to https://gist.github.com/fjfish/1461638
+  def read_time(timestamp)
+    string_elements = timestamp.split /[-T:Z+]+/
+    Time.new *(string_elements.map(&:to_f))
+  end
+
+  def timestamp(spot)
+    return nil if times_hash.nil?
+    a = times_hash[spot.to_s]
+    if a.nil?
+      a = times_hash["#{spot}_timestamp"]
+    end
+    if a.nil?
+      nil
+    else
+      read_time a
+    end
+  end
+
+  # this returns a decimal number in seconds of the race, official time
+  def elapsed_time(spot)
+    if spot.to_sym == :final
       final
     else
-      start = Time.parse(JSON.parse(times)["start_timestamp"])
-      inter = Time.parse(JSON.parse(times)[point.to_s])
-      (inner - start) * 24 * 60 * 60    
+      a = timestamp(spot)
+      if a.nil? or (start = timestamp(:start)).nil?
+        nil
+      else
+        a - start        
+      end
     end
+  end
+
+  def final
+    a = times_hash["final"]
+    if a.nil? then nil else a.to_f end
   rescue
     nil
   end
 
-  # this returns a decimal number in seconds of the race, official time
-  def final
-    JSON.parse(times)["final"].to_f
-  rescue
-    nil
-  end
+
 
   # verdict is nil, race is ongoing or accepted.
   def verdict
     JSON.parse(times)["verdict"]
   rescue
     nil
+  end
+
+  def exists_spot(spot)
+    not (times_hash[spot.to_s].nil? and times_hash["#{spot}_timestamp"])
   end
 
   # field times is a JSON object where each field represents an intermediate

@@ -12,7 +12,7 @@ json.runs do |json|
     if not run.times.empty?
       times = JSON.parse run.times
       json.times times
-      json.timemark format_time(a = times[@race.latest_timestamp.to_s], fastest_run)
+      json.timemark format_time(a = run.elapsed_time(@race.latest_timestamp), fastest_run)
       fastest_run = a if fastest_run == 0
       json.position = position
       position+=1

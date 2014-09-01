@@ -7,7 +7,7 @@ p 'Creating runs'
 @amf_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @amf,
                            number: '56',
-                           times: '{ "final": 873.7 }'
+                           times: ''
 @itp_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @itp,
                            number: '59',
@@ -15,7 +15,7 @@ p 'Creating runs'
 @itp_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @itp,
                            number: '59',
-                           times: '{ "final": 873 }'
+                           times: ''
 @ehf_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @ehf,
                            number: '53',
@@ -23,7 +23,7 @@ p 'Creating runs'
 @ehf_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @ehf,
                            number: '53',
-                           times: '{ "final": 876.7 }'
+                           times: ''
 @ebs_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @ebs,
                            number: '55',
@@ -31,7 +31,7 @@ p 'Creating runs'
 @ebs_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @ebs,
                            number: '55',
-                           times: '{ "final": 887.8 }'
+                           times: ''
 @rvc_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @rvc,
                            number: '57',
@@ -39,7 +39,7 @@ p 'Creating runs'
 @rvc_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @rvc,
                            number: '57',
-                           times: '{ "final": 910.3 }'
+                           times: ''
 @arp_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @arp,
                            number: '63',
@@ -47,7 +47,7 @@ p 'Creating runs'
 @arp_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @arp,
                            number: '63',
-                           times: '{ "final": 910.2 }'
+                           times: ''
 @mhs_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @mhs,
                            number: '68',
@@ -55,7 +55,7 @@ p 'Creating runs'
 @mhs_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @mhs,
                            number: '68',
-                           times: '{ "final": 936.9 }'
+                           times: ''
 @css_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @css,
                            number: '67',
@@ -63,7 +63,7 @@ p 'Creating runs'
 @css_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @css,
                            number: '67',
-                           times: '{ "final": 910 }'
+                           times: ''
 @hhg_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @hhg,
                            number: '65',
@@ -71,7 +71,7 @@ p 'Creating runs'
 @hhg_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @hhg,
                            number: '65',
-                           times: '{ "final": 931.8 }'
+                           times: ''
 @kkn_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @kkn,
                            number: '69',
@@ -79,7 +79,7 @@ p 'Creating runs'
 @kkn_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @kkn,
                            number: '69',
-                           times: '{ "final": 930.9 }'
+                           times: ''
 @sgs_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @sgs,
                            number: '60',
@@ -87,7 +87,7 @@ p 'Creating runs'
 @sgs_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @sgs,
                            number: '60',
-                           times: '{ "final": 927.7 }'
+                           times: ''
 @hlf_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @hlf,
                            number: '66',
@@ -95,7 +95,7 @@ p 'Creating runs'
 @hlf_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @hlf,
                            number: '66',
-                           times: '{ "final": 942.9 }'
+                           times: ''
 @lpp_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @lpp,
                            number: '62',
@@ -103,7 +103,7 @@ p 'Creating runs'
 @lpp_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @lpp,
                            number: '62',
-                           times: '{ "final": 960.8 }'
+                           times: ''
 @dnc_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @dnc,
                            number: '54',
@@ -111,7 +111,7 @@ p 'Creating runs'
 @dnc_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @dnc,
                            number: '54',
-                           times: '{ "final": 1006.7 }'
+                           times: ''
 @apf_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @apf,
                            number: '64',
@@ -119,7 +119,7 @@ p 'Creating runs'
 @apf_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @apf,
                            number: '64',
-                           times: '{ "final": 1171 }'
+                           times: ''
 @sbf_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @sbf,
                            number: '61',
@@ -127,7 +127,7 @@ p 'Creating runs'
 @sbf_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @sbf,
                            number: '61',
-                           times: '{ "final": 1194.9 }'
+                           times: ''
 @mkl_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @mkl,
                            number: '71',
@@ -135,7 +135,7 @@ p 'Creating runs'
 @mkl_sp4_day2 = Run.create! race: @sp4_day2,
                            user: @mkl,
                            number: '71',
-                           times: '{ "final": 1192.3 }'
+                           times: ''
 @ahf_sp4_day1 = Run.create! race: @sp4_day1,
                            user: @ahf,
                            number: '51',
@@ -199,7 +199,7 @@ p 'Creating runs'
 @khf_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @khf,
                            number: '78',
-                           times: '{ "final": 1191.6 }'
+                           times: ''
 @cts_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @cts,
                            number: '75',
@@ -207,7 +207,7 @@ p 'Creating runs'
 @cts_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @cts,
                            number: '75',
-                           times: '{ "final": 1174.1 }'
+                           times: ''
 @tkf_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @tkf,
                            number: '76',
@@ -215,7 +215,7 @@ p 'Creating runs'
 @tkf_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @tkf,
                            number: '76',
-                           times: '{ "final": 1207.9 }'
+                           times: ''
 @ton_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @ton,
                            number: '80',
@@ -223,7 +223,7 @@ p 'Creating runs'
 @ton_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @ton,
                            number: '80',
-                           times: '{ "final": 1225.2 }'
+                           times: ''
 @rkf_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @rkf,
                            number: '87',
@@ -231,7 +231,7 @@ p 'Creating runs'
 @rkf_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @rkf,
                            number: '87',
-                           times: '{ "final": 1288.4 }'
+                           times: ''
 @vlf2_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @vlf2,
                            number: '90',
@@ -239,7 +239,7 @@ p 'Creating runs'
 @vlf2_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @vlf2,
                            number: '90',
-                           times: '{ "final": 1266 }'
+                           times: ''
 @jtc_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @jtc,
                            number: '77',
@@ -247,7 +247,7 @@ p 'Creating runs'
 @jtc_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @jtc,
                            number: '77',
-                           times: '{ "final": 1279.8 }'
+                           times: ''
 @jkf_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @jkf,
                            number: '84',
@@ -255,7 +255,7 @@ p 'Creating runs'
 @jkf_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @jkf,
                            number: '84',
-                           times: '{ "final": 1259.6 }'
+                           times: ''
 @idl_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @idl,
                            number: '85',
@@ -263,7 +263,7 @@ p 'Creating runs'
 @idl_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @idl,
                            number: '85',
-                           times: '{ "final": 1330 }'
+                           times: ''
 @mbg_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @mbg,
                            number: '81',
@@ -271,7 +271,7 @@ p 'Creating runs'
 @mbg_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @mbg,
                            number: '81',
-                           times: '{ "final": 1372.3 }'
+                           times: ''
 @mcs_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @mcs,
                            number: '82',
@@ -279,7 +279,7 @@ p 'Creating runs'
 @mcs_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @mcs,
                            number: '82',
-                           times: '{ "final": 1371.9 }'
+                           times: ''
 @amf_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @amf,
                            number: '83',
@@ -287,7 +287,7 @@ p 'Creating runs'
 @amf_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @amf,
                            number: '83',
-                           times: '{ "final": 1407.4 }'
+                           times: ''
 @mcc_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @mcc,
                            number: '79',
@@ -295,7 +295,7 @@ p 'Creating runs'
 @mcc_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @mcc,
                            number: '79',
-                           times: '{ "final": 1520.9 }'
+                           times: ''
 @abp_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @abp,
                            number: '86',
@@ -303,7 +303,7 @@ p 'Creating runs'
 @abp_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @abp,
                            number: '86',
-                           times: '{ "final": 1619.4 }'
+                           times: ''
 @atf_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @atf,
                            number: '89',
@@ -311,7 +311,7 @@ p 'Creating runs'
 @atf_sp6_day2 = Run.create! race: @sp6_day2,
                            user: @atf,
                            number: '89',
-                           times: '{ "final": 1758.1 }'
+                           times: ''
 @lpp_sp6_day1 = Run.create! race: @sp6_day1,
                            user: @lpp,
                            number: '88',
@@ -327,7 +327,7 @@ p 'Creating runs'
 @phf_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @phf,
                            number: '92',
-                           times: '{ "final": 1620 }'
+                           times: '{ "start_timestamp": "2014-03-08T10:30:00.000Z" }'
 @rsf_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @rsf,
                            number: '102',
@@ -335,7 +335,7 @@ p 'Creating runs'
 @rsf_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @rsf,
                            number: '102',
-                           times: '{ "final": 1642.8 }'
+                           times: '{ "start_timestamp": "2014-03-09T10:31:00.000Z" }'
 @akg_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @akg,
                            number: '100',
@@ -343,7 +343,7 @@ p 'Creating runs'
 @akg_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @akg,
                            number: '100',
-                           times: '{ "final": 1638.5 }'
+                           times: '{ "start_timestamp": "2014-03-10T10:32:00.000Z" }'
 @cws_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @cws,
                            number: '93',
@@ -351,7 +351,7 @@ p 'Creating runs'
 @cws_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @cws,
                            number: '93',
-                           times: '{ "final": 1679 }'
+                           times: '{ "start_timestamp": "2014-03-11T10:33:00.000Z" }'
 @hhg_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @hhg,
                            number: '91',
@@ -359,7 +359,7 @@ p 'Creating runs'
 @hhg_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @hhg,
                            number: '91',
-                           times: '{ "final": 1743.1 }'
+                           times: '{ "start_timestamp": "2014-03-12T10:34:00.000Z" }'
 @mtg_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @mtg,
                            number: '97',
@@ -367,7 +367,7 @@ p 'Creating runs'
 @mtg_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @mtg,
                            number: '97',
-                           times: '{ "final": 1753 }'
+                           times: '{ "start_timestamp": "2014-03-13T10:35:00.000Z" }'
 @vhf_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @vhf,
                            number: '99',
@@ -375,7 +375,7 @@ p 'Creating runs'
 @vhf_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @vhf,
                            number: '99',
-                           times: '{ "final": 1793.3 }'
+                           times: '{ "start_timestamp": "2014-03-14T10:36:00.000Z" }'
 @egl_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @egl,
                            number: '101',
@@ -383,7 +383,7 @@ p 'Creating runs'
 @egl_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @egl,
                            number: '101',
-                           times: '{ "final": 1902 }'
+                           times: '{ "start_timestamp": "2014-03-15T10:37:00.000Z" }'
 @svh_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @svh,
                            number: '104',
@@ -391,7 +391,7 @@ p 'Creating runs'
 @svh_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @svh,
                            number: '104',
-                           times: '{ "final": 2062 }'
+                           times: '{ "start_timestamp": "2014-03-16T10:38:00.000Z" }'
 @mtp_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @mtp,
                            number: '95',
@@ -399,7 +399,7 @@ p 'Creating runs'
 @mtp_sp8_day2 = Run.create! race: @sp8_day2,
                            user: @mtp,
                            number: '95',
-                           times: '{ "final": 1921.4 }'
+                           times: '{ "start_timestamp": "2014-03-17T10:39:00.000Z" }'
 @klf_sp8_day1 = Run.create! race: @sp8_day1,
                            user: @klf,
                            number: '103',
@@ -439,7 +439,7 @@ p 'Creating runs'
 @hin_spu_day2 = Run.create! race: @spu_day2,
                            user: @hin,
                            number: '106',
-                           times: '{ "final": 2912 }'
+                           times: '{ "start_timestamp": "2014-03-22T10:44:00.000Z", "5km_timestamp": "2014-03-22T10:53:17.939Z" }'
 @kzs_spu_day1 = Run.create! race: @spu_day1,
                            user: @kzs,
                            number: '108',
@@ -447,7 +447,7 @@ p 'Creating runs'
 @kzs_spu_day2 = Run.create! race: @spu_day2,
                            user: @kzs,
                            number: '108',
-                           times: '{ "final": 3101 }'
+                           times: '{ "start_timestamp": "2014-03-23T10:45:00.000Z", "5km_timestamp": "2014-03-23T10:54:46.816Z" }'
 @mtg_spu_day1 = Run.create! race: @spu_day1,
                            user: @mtg,
                            number: '109',
@@ -455,7 +455,7 @@ p 'Creating runs'
 @mtg_spu_day2 = Run.create! race: @spu_day2,
                            user: @mtg,
                            number: '109',
-                           times: '{ "final": 3220.6 }'
+                           times: '{ "start_timestamp": "2014-03-24T10:46:00.000Z", "5km_timestamp": "2014-03-24T10:55:47.959Z" }'
 @tsg_spu_day1 = Run.create! race: @spu_day1,
                            user: @tsg,
                            number: '110',
@@ -463,7 +463,7 @@ p 'Creating runs'
 @tsg_spu_day2 = Run.create! race: @spu_day2,
                            user: @tsg,
                            number: '110',
-                           times: '{ "final": 3931.5 }'
+                           times: '{ "start_timestamp": "2014-03-25T10:47:00.000Z", "5km_timestamp": "2014-03-25T10:56:56.272Z" }'
 @alf_spu_day1 = Run.create! race: @spu_day1,
                            user: @alf,
                            number: '107',
@@ -487,7 +487,7 @@ p 'Creating runs'
 @crs_md12_day2 = Run.create! race: @md12_day2,
                            user: @crs,
                            number: '111',
-                           times: '{ "final": 3026.5 }'
+                           times: '{ "start_timestamp": "2014-03-28T10:50:00.000Z", "5km_timestamp": "2014-03-28T11:03:39.049Z", "10km_timestamp": "2014-03-28T11:15:47.477Z", "15km_timestamp": "2014-03-28T11:27:55.958Z" }'
 @rcf_md12_day1 = Run.create! race: @md12_day1,
                            user: @rcf,
                            number: '112',
@@ -495,7 +495,7 @@ p 'Creating runs'
 @rcf_md12_day2 = Run.create! race: @md12_day2,
                            user: @rcf,
                            number: '112',
-                           times: '{ "final": 3544.7 }'
+                           times: '{ "start_timestamp": "2014-03-29T10:51:00.000Z", "5km_timestamp": "2014-03-29T11:06:35.458Z", "10km_timestamp": "2014-03-29T11:22:01.041Z", "15km_timestamp": "2014-03-29T11:36:55.587Z" }'
 @ads_md12_day1 = Run.create! race: @md12_day1,
                            user: @ads,
                            number: '115',
@@ -503,7 +503,7 @@ p 'Creating runs'
 @ads_md12_day2 = Run.create! race: @md12_day2,
                            user: @ads,
                            number: '115',
-                           times: '{ "final": 4211.4 }'
+                           times: '{ "start_timestamp": "2014-03-30T10:52:00.000Z", "5km_timestamp": "2014-03-30T11:10:12.898Z", "10km_timestamp": "2014-03-30T11:27:59.574Z", "15km_timestamp": "2014-03-30T11:44:57.411Z" }'
 @psf_md12_day1 = Run.create! race: @md12_day1,
                            user: @psf,
                            number: '116',
@@ -511,7 +511,7 @@ p 'Creating runs'
 @psf_md12_day2 = Run.create! race: @md12_day2,
                            user: @psf,
                            number: '116',
-                           times: ''
+                           times: '{ "start_timestamp": "2014-03-31T10:53:00.000Z", "5km_timestamp": "2014-03-31T11:11:39.471Z", "10km_timestamp": "2014-03-31T11:28:37.868Z", "15km_timestamp": "2014-03-31T11:45:55.117Z" }'
 @rrg_md12_day1 = Run.create! race: @md12_day1,
                            user: @rrg,
                            number: '114',
@@ -519,7 +519,7 @@ p 'Creating runs'
 @rrg_md12_day2 = Run.create! race: @md12_day2,
                            user: @rrg,
                            number: '114',
-                           times: ''
+                           times: '{ "start_timestamp": "2014-04-01T10:54:00.000Z", "5km_timestamp": "2014-04-01T11:12:46.850Z", "10km_timestamp": "2014-04-01T11:30:29.964Z" }'
 @ppc_md12_day1 = Run.create! race: @md12_day1,
                            user: @ppc,
                            number: '113',
@@ -535,7 +535,7 @@ p 'Creating runs'
 @pkf_md6_day2 = Run.create! race: @md6_day2,
                            user: @pkf,
                            number: '119',
-                           times: '{ "final": 3576.9 }'
+                           times: '{ "start_timestamp": "2014-04-03T10:56:00.000Z", "5km_timestamp": "2014-04-03T11:12:24.421Z", "10km_timestamp": "2014-04-03T11:25:58.093Z", "15km_timestamp": "2014-04-03T11:42:15.048Z", "finish_timestamp": "2014-04-03T11:55:38.034Z" }'
 @asr_md6_day1 = Run.create! race: @md6_day1,
                            user: @asr,
                            number: '123',
@@ -543,7 +543,7 @@ p 'Creating runs'
 @asr_md6_day2 = Run.create! race: @md6_day2,
                            user: @asr,
                            number: '123',
-                           times: '{ "final": 4034.5 }'
+                           times: '{ "start_timestamp": "2014-04-04T10:57:00.000Z", "5km_timestamp": "2014-04-04T11:15:09.569Z", "10km_timestamp": "2014-04-04T11:31:05.991Z", "15km_timestamp": "2014-04-04T11:48:50.005Z", "finish_timestamp": "2014-04-04T12:04:15.030Z" }'
 @mvc_md6_day1 = Run.create! race: @md6_day1,
                            user: @mvc,
                            number: '120',
@@ -551,7 +551,7 @@ p 'Creating runs'
 @mvc_md6_day2 = Run.create! race: @md6_day2,
                            user: @mvc,
                            number: '120',
-                           times: '{ "final": 4159.2 }'
+                           times: '{ "start_timestamp": "2014-04-05T10:58:00.000Z", "5km_timestamp": "2014-04-05T11:15:35.041Z", "10km_timestamp": "2014-04-05T11:33:00.540Z", "15km_timestamp": "2014-04-05T11:51:25.245Z", "finish_timestamp": "2014-04-05T12:07:21.618Z" }'
 @gbp_md6_day1 = Run.create! race: @md6_day1,
                            user: @gbp,
                            number: '122',
@@ -559,7 +559,7 @@ p 'Creating runs'
 @gbp_md6_day2 = Run.create! race: @md6_day2,
                            user: @gbp,
                            number: '122',
-                           times: '{ "final": 4468.5 }'
+                           times: '{ "start_timestamp": "2014-04-06T10:59:00.000Z", "5km_timestamp": "2014-04-06T11:17:48.028Z", "10km_timestamp": "2014-04-06T11:37:21.379Z", "15km_timestamp": "2014-04-06T11:55:56.521Z", "finish_timestamp": "2014-04-06T12:13:29.246Z" }'
 @hma_md6_day1 = Run.create! race: @md6_day1,
                            user: @hma,
                            number: '126',
@@ -567,7 +567,7 @@ p 'Creating runs'
 @hma_md6_day2 = Run.create! race: @md6_day2,
                            user: @hma,
                            number: '126',
-                           times: '{ "final": 4196.9 }'
+                           times: '{ "start_timestamp": "2014-04-07T11:00:00.000Z", "5km_timestamp": "2014-04-07T11:18:19.330Z", "10km_timestamp": "2014-04-07T11:35:44.282Z", "15km_timestamp": "2014-04-07T11:53:48.682Z", "finish_timestamp": "2014-04-07T12:09:59.303Z" }'
 @jss_md6_day1 = Run.create! race: @md6_day1,
                            user: @jss,
                            number: '118',
@@ -575,7 +575,7 @@ p 'Creating runs'
 @jss_md6_day2 = Run.create! race: @md6_day2,
                            user: @jss,
                            number: '118',
-                           times: '{ "final": 4705.4 }'
+                           times: '{ "start_timestamp": "2014-04-08T11:01:00.000Z", "5km_timestamp": "2014-04-08T11:22:00.524Z", "10km_timestamp": "2014-04-08T11:41:31.294Z", "15km_timestamp": "2014-04-08T12:00:10.473Z", "finish_timestamp": "2014-04-08T12:19:26.672Z" }'
 @jef_md6_day1 = Run.create! race: @md6_day1,
                            user: @jef,
                            number: '117',
@@ -583,7 +583,7 @@ p 'Creating runs'
 @jef_md6_day2 = Run.create! race: @md6_day2,
                            user: @jef,
                            number: '117',
-                           times: '{ "final": 4904.6 }'
+                           times: '{ "start_timestamp": "2014-04-09T11:02:00.000Z", "5km_timestamp": "2014-04-09T11:23:20.155Z", "10km_timestamp": "2014-04-09T11:42:54.225Z", "15km_timestamp": "2014-04-09T12:03:53.536Z", "finish_timestamp": "2014-04-09T12:23:46.730Z" }'
 @kkf_md6_day1 = Run.create! race: @md6_day1,
                            user: @kkf,
                            number: '124',
@@ -591,7 +591,7 @@ p 'Creating runs'
 @kkf_md6_day2 = Run.create! race: @md6_day2,
                            user: @kkf,
                            number: '124',
-                           times: '{ "final": 4355.6 }'
+                           times: '{ "start_timestamp": "2014-04-10T11:03:00.000Z", "5km_timestamp": "2014-04-10T11:21:31.081Z", "10km_timestamp": "2014-04-10T11:39:37.883Z", "15km_timestamp": "2014-04-10T11:58:09.369Z", "finish_timestamp": "2014-04-10T12:15:37.880Z" }'
 @slf_md6_day1 = Run.create! race: @md6_day1,
                            user: @slf,
                            number: '127',
@@ -599,7 +599,7 @@ p 'Creating runs'
 @slf_md6_day2 = Run.create! race: @md6_day2,
                            user: @slf,
                            number: '127',
-                           times: '{ "final": 5035.3 }'
+                           times: '{ "start_timestamp": "2014-04-11T11:04:00.000Z", "5km_timestamp": "2014-04-11T11:25:48.782Z", "10km_timestamp": "2014-04-11T11:46:52.859Z", "15km_timestamp": "2014-04-11T12:07:39.954Z", "finish_timestamp": "2014-04-11T12:27:56.363Z" }'
 @gzc_md6_day1 = Run.create! race: @md6_day1,
                            user: @gzc,
                            number: '121',
@@ -607,7 +607,7 @@ p 'Creating runs'
 @gzc_md6_day2 = Run.create! race: @md6_day2,
                            user: @gzc,
                            number: '121',
-                           times: '{ "final": 5634.5 }'
+                           times: '{ "start_timestamp": "2014-04-12T11:05:00.000Z", "5km_timestamp": "2014-04-12T11:29:07.329Z", "10km_timestamp": "2014-04-12T11:52:35.862Z", "15km_timestamp": "2014-04-12T12:16:51.375Z", "finish_timestamp": "2014-04-12T12:38:54.805Z" }'
 @paf_md6_day1 = Run.create! race: @md6_day1,
                            user: @paf,
                            number: '125',
@@ -615,5 +615,5 @@ p 'Creating runs'
 @paf_md6_day2 = Run.create! race: @md6_day2,
                            user: @paf,
                            number: '125',
-                           times: ''
+                           times: '{ "start_timestamp": "2014-04-13T11:06:00.000Z" }'
 

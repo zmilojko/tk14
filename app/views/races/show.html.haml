@@ -42,7 +42,7 @@
       %th Time
 
   - i = 0
-  - winner_time = 0
+  - winner_time = nil
   - @race.runs_sorted.each do |run|
     %tr
       -if @race.status != 'not_started'
@@ -51,5 +51,5 @@
       %td= run.user.show_name
       -if @race.status != 'not_started'
         -if not run.times.empty?
-          %td= format_time(a = JSON.parse(run.times)["final"], winner_time)
-          -winner_time=a if winner_time == 0
+          %td=format_time(a = run.elapsed_time(@race.latest_timestamp), winner_time)
+          -winner_time=a if winner_time.nil?
