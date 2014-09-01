@@ -12,8 +12,12 @@ class Run < ActiveRecord::Base
 
   # many thanks to https://gist.github.com/fjfish/1461638
   def read_time(timestamp)
-    string_elements = timestamp.split /[-T:Z+]+/
-    Time.new *(string_elements.map(&:to_f))
+    if timestamp.class == Float
+      Time.new timestamp
+    else
+      string_elements = timestamp.split /[-T:Z+]+/
+      Time.new *(string_elements.map(&:to_f))
+    end
   end
 
   def timestamp(spot)
