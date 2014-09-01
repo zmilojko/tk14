@@ -29,7 +29,7 @@ class Race < ActiveRecord::Base
   # In all cases, if verdict is not null, it should sort by verdict first.
   def runs_sorted
     case status.to_sym
-      when :not_started then p "blah"; runs_by_number
+      when :not_started then runs_by_number
       when :completed then runs_by_time(:finish_timestamp)
       when :closed then runs_by_time(:final)
       when :ongoing then runs_by_time(latest_timestamp)
