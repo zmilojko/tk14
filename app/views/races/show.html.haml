@@ -38,11 +38,15 @@
       %th Position
     %th Starting number
     %th Competitor
+    -timemarks = @race.all_timestamps; timemarks.shift
     -if @race.status != 'not_started'
-      %th Time
+      -timemarks.each do |timestamp|
+        %th=timestamp.to_s.sub("_timestamp", "")
 
   - i = 0
-  - winner_time = nil
+  - winner_time = Hash[timemarks.map { |timestamp| [timestamp,nil] }]
+  -puts "runs not sorted: #{@race.runs.inspect}"
+  - puts "runs sorted: #{@race.runs_sorted.inspect}"
   - @race.runs_sorted.each do |run|
     %tr
       -if @race.status != 'not_started'
@@ -51,5 +55,6 @@
       %td= run.user.show_name
       -if @race.status != 'not_started'
         -if not run.times.empty?
-          %td=format_time(a = run.elapsed_time(@race.latest_timestamp), winner_time)
-          -winner_time=a if winner_time.nil?
+          -timemarks.each do |timestamp|
+            %td=format_time(a = run.elapsed_time(timestamp), winner_time[timestamp])
+            -winner_time[timestamp]=a if winner_time[timestamp].nil?
