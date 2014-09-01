@@ -12,7 +12,7 @@ class Run < ActiveRecord::Base
 
   # many thanks to https://gist.github.com/fjfish/1461638
   def read_time(timestamp)
-    if timestamp.class == Float
+    if timestamp.class == Float or timestamp.class == Fixnum
       Time.new timestamp
     else
       string_elements = timestamp.split /[-T:Z+]+/
