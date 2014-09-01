@@ -4,10 +4,10 @@ one:
   race: two
   user: dummy
   number: MyString
-  times: MyString
+  times: '{"final": 808.2}'
 
 two:
   race: two
   user: dummy
   number: MyString
-  times: MyString
+  times: '{"final": 808.2}'
