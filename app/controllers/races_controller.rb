@@ -64,6 +64,19 @@ class RacesController < ApplicationController
     end
   end
 
+  # POST /races/1/mark
+  # POST /races/1/mark.json
+  def mark
+    puts "trying to mark race #{params[:id]} with params: #{params.inspect}"
+    run = Run.find(params[:run_id])
+    puts "Will update run #{run.inspect}"
+    new_hash = run.times_hash || Hash.new
+    new_hash["#{params[:timestamp]}_timestamp".to_sym] = params[:mark]
+    run.times = new_hash.to_json
+    run.save
+    render :nothing => true, :status => 200, :content_type => 'text/html'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_race

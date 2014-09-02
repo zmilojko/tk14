@@ -38,7 +38,7 @@
       %th Position
     %th Starting number
     %th Competitor
-    -timemarks = @race.all_timestamps; timemarks.shift
+    -timemarks = @race.all_timestamps
     -if @race.status != 'not_started'
       -timemarks.each do |timestamp|
         %th=timestamp.to_s.sub("_timestamp", "")
@@ -52,7 +52,13 @@
       %td= run.number
       %td= run.user.show_name
       -if @race.status != 'not_started'
-        -if not run.times.empty?
-          -timemarks.each do |timestamp|
-            %td=format_time(a = run.elapsed_time(timestamp), winner_time[timestamp])
+        -#if not run.times.empty?
+        -timemarks.each do |timestamp|
+          -if (a = run.elapsed_time(timestamp)).nil?
+            -if @race.status.to_sym == :ongoing and current_user.try(:is_admin?) and
+            - timestamp.to_sym != :final
+              %td
+                .mark_button{id: "mark_race_#{@race.id}_run_#{run.id}_timestamp_#{timestamp}"} mark now
+          -else
+            %td=format_time(a, winner_time[timestamp]) if timestamp != :start_timestamp
             -winner_time[timestamp]=a if winner_time[timestamp].nil?
