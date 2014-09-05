@@ -44,8 +44,8 @@
         %th=timestamp.to_s.sub("_timestamp", "")
 
   - i = 0
-  - winner_time = Hash[timemarks.map { |timestamp| [timestamp,nil] }]
-  - @race.runs_sorted.each do |run|
+  - winner = Hash[timemarks.map { |spot| [spot,@race.fastest_on_spot(spot)] }]
+  - @race.runs.sort.each do |run|
     %tr
       -if @race.status != 'not_started'
         %td= i=i+1
@@ -60,5 +60,4 @@
               %td
                 .mark_button{id: "mark_race_#{@race.id}_run_#{run.id}_timestamp_#{timestamp}"} mark now
           -else
-            %td=format_time(a, winner_time[timestamp]) if timestamp != :start_timestamp
-            -winner_time[timestamp]=a if winner_time[timestamp].nil?
+            %td{style:"#{if run == winner[timestamp] then 'font-weight: bold'else ''end }"}=run.formated_time_mark(timestamp, winner[timestamp])
