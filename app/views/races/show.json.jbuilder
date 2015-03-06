@@ -6,7 +6,7 @@ end
 fastest_run = 0
 position = 1
 json.runs do |json|
-  json.array! @race.runs_sorted do |run|
+  json.array! @race.runs.sort do |run|
     json.number run.number
     json.competitor run.user
     if not run.times.empty?
